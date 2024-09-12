@@ -2,7 +2,7 @@ import { useState } from "react";
 import Event from "./Event";
 
 const Calendar = () => {
-  const [events, setEvents]:any = useState({
+  const [events]:any = useState({
     sunday: {
       "9 am": { e: "Breakfast", c: "yellow" },
       "10 am": { e: "Gym", c: "green" },
