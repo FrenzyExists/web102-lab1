@@ -19,3 +19,7 @@ td {
 .time {
   height: 40px;
 }
+
+table {
+  -webkit-border-vertical-spacing: 0px;
+}

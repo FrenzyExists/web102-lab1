@@ -4,18 +4,46 @@ import Event from "./Event";
 const Calendar = () => {
   const [events, setEvents]:any = useState({
     sunday: {
-      "8 am": { e: "Breakfast", c: "orange" },
+      "9 am": { e: "Breakfast", c: "yellow" },
       "10 am": { e: "Gym", c: "green" },
     },
     monday: {
-      "9 am": { e: "Meeting", c: "blue" },
-      "12 pm": { e: "Lunch", c: "red" },
+      "9 am": { e: "Breakfast", c: "yellow" },
+      "10 am": { e: "FPGA Course", c: "green" },
+      "11 am": { e: "FPGA Course", c: "green" },
+      "3 pm": {e: "Research Meeting", c: "magenta"},
     },
     // Continue similarly for the other days
-    tuesday: {},
-    wednesday: {},
-    thursday: {},
-    friday: {},
+    tuesday: {
+        "9 am": { e: "Breakfast", c: "yellow" },
+        "8 pm": {e: "Codepath Cyb102", c: "blue"},
+        "9 pm": {e: "Codepath Cyb102", c: "blue"},
+        "10 pm": {e: "Codepath Cyb102", c: "blue"},
+        "1 pm": { e: "Research Time", c: "magenta" },
+        "2 pm": { e: "Research Time", c: "magenta" },
+        "3 pm": { e: "Research Time", c: "magenta" },
+        "4 pm": { e: "Research Time", c: "magenta" },
+    },
+    wednesday: {
+        "9 am": { e: "Breakfast", c: "yellow" },
+        "10 am": { e: "FPGA Course", c: "green" },
+        "11 am": { e: "FPGA Course", c: "green" },
+    },
+    thursday: {
+        "9 am": { e: "Breakfast", c: "yellow" },
+        "6 am": { e: "Codepath Web103", c: "blue" },
+        "7 pm": { e: "Codepath Web103", c: "blue" },
+        "8 pm": { e: "Codepath Web103", c: "blue" },
+        "1 pm": { e: "Research Time", c: "magenta" },
+        "2 pm": { e: "Research Time", c: "magenta" },
+        "3 pm": { e: "Research Time", c: "magenta" },
+        "4 pm": { e: "Research Time", c: "magenta" },
+    },
+    friday: {
+        "9 am": { e: "Breakfast", c: "yellow" },
+        "10 am": { e: "FPGA Course", c: "green" },
+        "11 am": { e: "FPGA Course", c: "green" },
+    },
     saturday: {},
   });
 
@@ -30,6 +58,12 @@ const Calendar = () => {
     "3 pm",
     "4 pm",
     "5 pm",
+    "6 pm",
+    "7 pm",
+    "8 pm",
+    "9 pm",
+    "10 pm",
+    "11 pm"
   ];
 
   const days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
@@ -50,7 +84,7 @@ const Calendar = () => {
             <tr key={time}>
               <td className="time">{time}</td>
               {days.map((day) => (
-                <td key={day}>
+                <td key={day} >
                   {events[day][time] ? (
                     <Event event={events[day][time].e} color={events[day][time].c} />
                   ) : (

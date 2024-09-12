@@ -8,9 +8,9 @@ interface EventInterface {
 
 const Event: FC<EventInterface> = ({event, color}) => {
     return (
-        <>
-        <h5 className={`Event ${color}`}>{event}</h5>
-        </>
+        <div className={`Event ${color}`}>
+        <h5 >{event}</h5>
+        </div>
     );
 }
 
