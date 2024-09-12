@@ -40,6 +40,11 @@
 .Event {
   height: 100%;
   width: 100%;
+  
 justify-content: center;
 display: flex;
+}
+
+.Event h5 {
+  padding: 4px;
 }

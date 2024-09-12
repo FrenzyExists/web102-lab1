@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+# Codepath Lab 1 -  Timetabled
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+In this project, you will build a grid-style calendar with one-hour events that plan out a single week. You must create the calendar for someone else. This can be a friend, family member, historical figure, role model, or imaginary person. Timetables can be informative, humorous, or exploratory. For example:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- General: Plan a vacation for a friend, family member, or pet
+- History: A week in the life of a historical figure, timeline of a coup
+- Psychology: How to adapt to a polyphasic sleep cycle
+- True crime: The week before a famous crime
 
-## Expanding the ESLint configuration
+## Required Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- A one-week calendar that includes one-hour time blocks
+- Events have different titles
+- Events have different colors based on their type
 
-- Configure the top-level `parserOptions` property like this:
+## Stretch Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Event blocks have additional information, such as a description and location
+- (My own stretch) - Use typescript instead
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Resources
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- [Getting Started with Vite](https://vitejs.dev/guide)
+- [ReactJS: Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
+- [ReactJS: Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
+- [ReactJS: Components and Props](https://reactjs.org/docs/components-and-props.html)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Demo
+
+![](./src/assets/demo.png)

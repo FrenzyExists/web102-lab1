@@ -13,7 +13,7 @@ th {
 }
 
 td {
-  padding: 5px;
+  margin: 2px;
 }
 
 .time {
@@ -22,4 +22,5 @@ td {
 
 table {
   -webkit-border-vertical-spacing: 0px;
+  -webkit-border-horizontal-spacing: 0px;
 }
